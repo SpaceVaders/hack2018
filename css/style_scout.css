@@ -1,0 +1,60 @@
+/*Reset*/
+html{ 
+	margin: 0;
+	padding: 0;
+}
+
+/* Font-face custom fonts definition*/
+@font-face {
+    font-family: 'cirth_ereborregular';
+    src: url('/fonts/cirtherebor-webfont.woff2') format('woff2'),
+         url('/fonts/cirtherebor-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cirth_erebor-1regular';
+    src: url('/fonts/cirtherebor1-webfont.woff2') format('woff2'),
+         url('/fonts/cirtherebor1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cirth_erebor-2regular';
+    src: url('/fonts/cirtherebor2-webfont.woff2') format('woff2'),
+         url('/fonts/cirtherebor2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cirth_erebor_capsregular';
+    src: url('/fonts/cirthereborcaps-webfont.woff2') format('woff2'),
+         url('/fonts/cirthereborcaps-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cirth_erebor_caps-1regular';
+    src: url('/fonts/cirthereborcaps1-webfont.woff2') format('woff2'),
+         url('/fonts/cirthereborcaps1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cirth_erebor_caps-2regular';
+    src: url('/fonts/cirthereborcaps2-webfont.woff2') format('woff2'),
+         url('/fonts/cirthereborcaps2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
