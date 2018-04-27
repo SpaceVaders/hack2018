@@ -1,0 +1,50 @@
+/* for whole planet ( including ring ) */
+#saturn {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: auto;
+  transform: rotateZ(-15deg);
+  transform-style: preserve-3d;
+}
+/* RING */
+.rings {
+  position: relative;
+  width: 100%;
+  transform: rotateX(75deg);
+  height: 100%;
+  background: radial-gradient(ellipse at center,  rgba(24,19,25,0) 0%,rgba(53,52,51,0) 34%,rgba(55,54,52,1) 36%,rgba(56,55,53,1) 37%,rgba(68,67,66,1) 38%,rgba(56,55,53,1) 39%,rgba(68,67,66,1) 40%,rgba(56,55,53,1) 41%,rgba(87,77,76,1) 42%,rgba(87,77,76,1) 44%,rgba(113,110,103,1) 46%,rgba(113,110,103,1) 48%,rgba(113,98,93,1) 49%,rgba(113,98,93,1) 51%,rgba(122,115,105,1) 52%,rgba(113,98,93,1) 53%,rgba(113,98,93,1) 54%,rgba(122,115,105,1) 55%,rgba(106,99,89,1) 56%,rgba(106,99,89,1) 58%,rgba(79,76,76,0) 60%,rgba(65,64,70,1) 61%,rgba(65,64,70,1) 62%,rgba(90,85,89,1) 63%,rgba(78,74,73,1) 65%,rgba(78,73,74,1) 67%,rgba(78,73,74,0) 68%,rgba(78,73,75,1) 69%,rgba(78,73,75,1) 70%,rgba(78,73,76,0) 71%,rgba(77,72,76,0) 72%,rgba(24,19,25,0) 100%);
+}
+/* Planet inside - backround ( clouds, texture ) */
+/* PLANET TEXTURE BACKROUND */
+.planet {
+  background-image: url("saturn.jpg");
+  background-position: center;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 110px;
+  left: 110px;
+  border-radius: 50%;
+  box-shadow: 0px 6px 70px 15px rgba(79,77,79,1);
+  animation: rotateBackround 40s infinite linear;
+}
+/* PLANET CLOUDS TEXTURE BACKROUND  */
+.planet:after{ 
+  content: '';
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  background-image: url("saturn_clouds.jpg");
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: rotateBackround 25s infinite linear;
+}
+@keyframes rotateBackround{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: -600px;
+	}
+}

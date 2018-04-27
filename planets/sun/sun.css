@@ -1,0 +1,39 @@
+/* Planet containers______START*/
+
+/* planet outside shadows */
+.planet{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 55px 10px  rgba(235,192,82,0.8);
+	animation: rotatePlanet 150s infinite linear;
+}
+/* planet inside shadows */
+.planet:after{ 
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: inset 0px 0px 37px 32px  rgba(224,126,52,1);
+}
+/* Planet containers_____END*/
+/* Planet inside - backround ( clouds, texture ) */
+
+#sun_inside{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+}
+/* PLANET TEXTURE BACKROUND */
+#sun_inside:before{
+	content: '';
+	position: absolute;
+	background-image: url("sun.jpg");
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	animation: rotateBackround 40s linear infinite;
+	opacity: 0.9;
+}
