@@ -1,14 +1,17 @@
 /*Reset*/
-html{ 
+html, body, main, div, span{ 
 	margin: 0;
 	padding: 0;
+}
+html{
+	font-size: 65.5%
 }
 
 /* Font-face custom fonts definition*/
 @font-face {
     font-family: 'cirth_ereborregular';
-    src: url('/fonts/cirtherebor-webfont.woff2') format('woff2'),
-         url('/fonts/cirtherebor-webfont.woff') format('woff');
+    src: url('../fonts/cirtherebor-webfont.woff2') format('woff2'),
+         url('../fonts/cirtherebor-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -16,8 +19,8 @@ html{
 
 @font-face {
     font-family: 'cirth_erebor-1regular';
-    src: url('/fonts/cirtherebor1-webfont.woff2') format('woff2'),
-         url('/fonts/cirtherebor1-webfont.woff') format('woff');
+    src: url('../fonts/cirtherebor1-webfont.woff2') format('woff2'),
+         url('../fonts/cirtherebor1-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -25,8 +28,8 @@ html{
 
 @font-face {
     font-family: 'cirth_erebor-2regular';
-    src: url('/fonts/cirtherebor2-webfont.woff2') format('woff2'),
-         url('/fonts/cirtherebor2-webfont.woff') format('woff');
+    src: url('../fonts/cirtherebor2-webfont.woff2') format('woff2'),
+         url('../fonts/cirtherebor2-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -34,8 +37,8 @@ html{
 
 @font-face {
     font-family: 'cirth_erebor_capsregular';
-    src: url('/fonts/cirthereborcaps-webfont.woff2') format('woff2'),
-         url('/fonts/cirthereborcaps-webfont.woff') format('woff');
+    src: url('../fonts/cirthereborcaps-webfont.woff2') format('woff2'),
+         url('../fonts/cirthereborcaps-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -43,8 +46,8 @@ html{
 
 @font-face {
     font-family: 'cirth_erebor_caps-1regular';
-    src: url('/fonts/cirthereborcaps1-webfont.woff2') format('woff2'),
-         url('/fonts/cirthereborcaps1-webfont.woff') format('woff');
+    src: url('../fonts/cirthereborcaps1-webfont.woff2') format('woff2'),
+         url('../fonts/cirthereborcaps1-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -52,9 +55,168 @@ html{
 
 @font-face {
     font-family: 'cirth_erebor_caps-2regular';
-    src: url('/fonts/cirthereborcaps2-webfont.woff2') format('woff2'),
-         url('/fonts/cirthereborcaps2-webfont.woff') format('woff');
+    src: url('../fonts/cirthereborcaps2-webfont.woff2') format('woff2'),
+         url('../fonts/cirthereborcaps2-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
+/*end of font-face*/
+
+div#secret{	
+  	height: 9rem;
+  	font-family: 'cirth_ereborregular', Fallback, sans-serif;
+	line-height: 9rem;	
+}
+
+div#secret span{
+	font-family: 'cirth_ereborregular', Fallback, sans-serif;
+	font-size: 5.8rem;
+	text-align: center;
+	margin: auto;
+	display: block;
+}
+
+.wrapper{
+	width: 80%;
+	margin: auto;
+}
+
+div#secret > div{
+	display: inline-block;
+	width: 9.33%;
+	height: 100%;
+	border:1px solid black;
+	font-size: 9rem;
+	
+}
+div .shadow{
+	z-index: 1;
+	position: relative;
+}
+div#shadow_div_container_1{
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	width: 98%;
+	height: 32%;	
+}
+
+
+
+div#shadow_div_container_2{
+	border: 1px solid black;
+	z-index: 2;
+	position: absolute;
+	top: 33%;
+	width: 98%;
+	height: 33%;
+	
+}
+
+div#shadow_div_container_3{
+	z-index: 2;
+	position: absolute;
+	top: 66%;
+	width: 98%;
+	height: 33%;
+	
+}
+
+/*Shadow cells */
+#shadow_cell_11{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+	background-color: black;
+	opacity: 0.2;
+
+}
+
+#shadow_cell_12{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 33.1%;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+	background-color: blue;
+
+}
+
+#shadow_cell_13{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 66%;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+	background-color: green;
+}
+
+#shadow_cell_21{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+}
+
+#shadow_cell_22{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 33.1%;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+
+}
+
+#shadow_cell_23{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 66%;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+}
+
+#shadow_cell_31{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+}
+
+#shadow_cell_32{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 33%;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+
+}
+
+#shadow_cell_33{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 66%;
+	height: 100%;
+	width: 33%;
+	border: 1px solid black;
+}
+
+/* end of shadow cells*/
