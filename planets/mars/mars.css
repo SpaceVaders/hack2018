@@ -1,0 +1,70 @@
+/* Planet containers______START*/
+
+/* planet outside shadows */
+.planet{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 37px 5px rgba(153,94,22,0.8);
+	animation: rotatePlanet 150s infinite linear;
+}
+/* planet inside shadows */
+.planet:after{ 
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: inset 0px 0px 37px 32px rgba(153,94,22,1);
+}
+/* Planet containers_____END*/
+/* Planet inside - backround ( clouds, texture ) */
+
+#mars_inside{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+}
+/* PLANET TEXTURE BACKROUND */
+#mars_inside:before{
+	content: '';
+	position: absolute;
+	background-image: url("mars.png");
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	animation: rotateBackround 40s linear infinite;
+}
+/* PLANET CLOUDS TEXTURE BACKROUND  */
+#mars_inside:after{
+	content: '';
+	position: absolute;
+	background-image: url("mars_clouds.jpg");
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;	
+	animation: rotateBackround 22s linear infinite;
+	opacity: 0.5;
+
+}
+/* ROTATING BACKROUND, EFECT 3D */
+@keyframes rotateBackround{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: -600px;
+	}
+}
+/* ROTATING PLANET*/
+@keyframes rotatePlanet{
+  0%{
+    transform:rotateZ(0);
+    
+  }
+  100%{
+    transform:rotateZ(180deg);
+    
+  }
+}
