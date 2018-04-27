@@ -1,0 +1,73 @@
+/* Planet containers______START*/
+
+/* planet outside shadows */
+.planet{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: 
+  0 0 60px -20px rgba(9, 123, 202, 0.72), 
+  -14px -15px 40px -10px rgba(9,123,202, 0.23);
+	animation: rotatePlanet 150s infinite linear;
+}
+/* planet inside shadows */
+.planet:after{ 
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: inset 0px 0px 5px 2px rgba(10,38,159, 0.3), 
+  inset 10px 10px 30px -10px rgba(131,215,246, 0.6);
+}
+/* Planet containers_____END*/
+/* Planet inside - backround ( clouds, texture ) */
+
+#earth_inside{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+}
+/* PLANET TEXTURE BACKROUND */
+#earth_inside:before{
+	content: '';
+	position: absolute;
+	background-image: url("earth.jpg");
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	animation: rotateBackround 40s linear infinite;
+}
+/* PLANET CLOUDS TEXTURE BACKROUND  */
+#earth_inside:after{
+	content: '';
+	position: absolute;
+	background-image: url("earth_clouds.jpg");
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;	
+	animation: rotateBackround 30s linear infinite;
+	opacity: 0.3;
+
+}
+/* ROTATING BACKROUND, EFECT 3D */
+@keyframes rotateBackround{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: -600px;
+	}
+}
+/* ROTATING PLANET*/
+@keyframes rotatePlanet{
+  0%{
+    transform:rotateZ(0);
+    
+  }
+  100%{
+    transform:rotateZ(180deg);
+    
+  }
+}

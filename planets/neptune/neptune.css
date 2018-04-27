@@ -1,0 +1,70 @@
+/* Planet containers______START*/
+
+/* planet outside shadows */
+.planet{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: 0px 6px 70px 15px rgba(15,94,163,0.7);
+	animation: rotatePlanet 150s infinite linear;
+}
+/* planet inside shadows */
+.planet:after{ 
+	position: absolute;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: inset 0px 10px 85px 22px  rgba(5,48,156,0.8);
+}
+/* Planet containers_____END*/
+/* Planet inside - backround ( clouds, texture ) */
+
+#neptune_inside{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+}
+/* PLANET TEXTURE BACKROUND */
+#neptune_inside:before{
+	content: '';
+	position: absolute;
+	background-image: url("neptune.jpg");
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	animation: rotateBackround 40s linear infinite;
+}
+/* PLANET CLOUDS TEXTURE BACKROUND  
+#mercury_inside:after{
+	content: '';
+	position: absolute;
+	background-image: url("");
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;	
+	animation: rotateBackround 22s linear infinite;
+	opacity: 0.5;
+
+}*/
+/* ROTATING BACKROUND, EFECT 3D */
+@keyframes rotateBackround{
+	0%{
+		background-position: 0px;
+	}
+	100%{
+		background-position: -600px;
+	}
+}
+/* ROTATING PLANET*/
+@keyframes rotatePlanet{
+  0%{
+    transform:rotateZ(0);
+    
+  }
+  100%{
+    transform:rotateZ(180deg);
+    
+  }
+}
