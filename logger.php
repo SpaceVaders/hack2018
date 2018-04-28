@@ -35,6 +35,42 @@ while ($row = $result->fetch_assoc()) {
     <div id=jupiter_inside></div>
   </div>';
           break;
+          case 3:
+        echo '<div class=planet id=mars_outside>
+    <div id=mars_inside></div>
+  </div>';
+          break;
+          case 4:
+        echo '<div class=planet id=mercury_outside>
+    <div id=mercury_inside></div>
+  </div>';
+          break;
+           case 5:
+        echo '<div class=planet id=neptune_outside>
+    <div id=neptune_inside></div>
+  </div>';
+          break;
+           case 6:
+        echo '<div id="saturn">
+    <div class="planet"></div>
+    <div class="rings"></div>
+  </div>';
+          break;
+           case 7:
+        echo '<div class=planet id=sun_outside>
+    <div id=sun_inside></div>
+  </div>';
+          break;
+          case 8:
+        echo '<div class=planet id=uranus_outside>
+    <div id=uranus_inside></div>
+  </div>';
+          break;
+           case 9:
+        echo '<div class=planet id=venus_outside>
+    <div id=venus_inside></div>
+  </div>';
+          break;
         default:
           # code...
           break;
