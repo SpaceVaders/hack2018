@@ -11,8 +11,14 @@
   <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/login_style.css" />
+<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
 		<link rel="stylesheet" type="text/css" href="css/main_page.css">
+=======
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />		
+		<link rel="stylesheet" type="text/css" href="css/main_page.css">
+		<link rel="stylesheet" type="text/css" href="css/log.css">
+>>>>>>> svetli
 </head>
 <body>
 	
