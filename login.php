@@ -6,14 +6,16 @@
 			
 			$user = $_POST['user'];
 			$pass = $_POST['pass'];
-			$query = "SELECT * FROM `users` WHERE username='".$user."' ";
+			$query = "SELECT * FROM `users` WHERE username='$user' ";
 			$sql = mysqli_query($conn, $query);
 			$row = mysqli_fetch_assoc($sql);
+			// var_dump($row);
 			if (password_verify($pass, $row['password'])) 
 			{
+
 				$_SESSION['user_id'] = $row['id'];
 				$_SESSION['username'] = $row['username'];
-				header("Location: main_page.php");
+				header("Location: logger.php");
 			}
 			else
 			{

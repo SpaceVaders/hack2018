@@ -18,14 +18,14 @@
 				echo '<a href="signup_login.php">Go Back</a>';
 			}else{
 				if ($containsLetter && $containsDigit){
-		        	$sql= mysqli_query($conn, "SELECT username  FROM users WHERE username = '".$user."'");
+		        	$sql= mysqli_query($conn, "SELECT username  FROM users WHERE username = '$user'");
 					if(mysqli_num_rows($sql)>=1){
 			    		echo"username already exists";
 			    		echo '<p></p>';
 						echo '<a href="signup_login.php">Go Back</a>';
 			   		}else{
 			   			$hashed_pass = crypt($pass);
-			   			$query = "INSERT into users (username, password, race) VALUES ('".$user."','".$hashed_pass."','".$race."')";
+			   			$query = "INSERT into users (username, password, race) VALUES ('$user','$hashed_pass','$race')";
 						mysqli_query($conn, $query);
 						header("Location:signup_login.php");
 			   		}
