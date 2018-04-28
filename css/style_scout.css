@@ -86,7 +86,6 @@ div#secret > div{
 	display: inline-block;
 	width: 9.33%;
 	height: 100%;
-	border:1px solid black;
 	font-size: 9rem;
 	
 }
@@ -98,18 +97,17 @@ div#shadow_div_container_1{
 	z-index: 2;
 	position: absolute;
 	top: 0;
-	width: 98%;
-	height: 32%;	
+	width: 100%;
+	height: 33%;	
 }
 
 
 
 div#shadow_div_container_2{
-	border: 1px solid black;
 	z-index: 2;
 	position: absolute;
 	top: 33%;
-	width: 98%;
+	width: 100%;
 	height: 33%;
 	
 }
@@ -118,105 +116,159 @@ div#shadow_div_container_3{
 	z-index: 2;
 	position: absolute;
 	top: 66%;
-	width: 98%;
+	width: 100%;
 	height: 33%;
-	
 }
 
 /*Shadow cells */
-#shadow_cell_11{
+.shadow_cell_11{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
 	background-color: black;
-	opacity: 0.2;
+	opacity: 1;
 
 }
 
-#shadow_cell_12{
+.shadow_cell_12{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 33.1%;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
-	background-color: blue;
+	background-color: black;
+	opacity: 1;
 
 }
 
-#shadow_cell_13{
+.shadow_cell_13{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 66%;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
-	background-color: green;
+	background-color: black;
+	opacity: 1;
 }
 
-#shadow_cell_21{
+.shadow_cell_21{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
+	background-color: black;
+	opacity: 1;
 }
 
-#shadow_cell_22{
+.shadow_cell_22{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 33.1%;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
-
+	background-color: black;
+	opacity: 1;
 }
 
-#shadow_cell_23{
+.shadow_cell_23{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 66%;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
+	background-color: black;
+	opacity: 1;
 }
 
-#shadow_cell_31{
+.shadow_cell_31{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
+	background-color: black;
+	opacity: 1;
 }
 
-#shadow_cell_32{
+.shadow_cell_32{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 33%;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
+	background-color: black;
+	opacity: 1;
 
 }
 
-#shadow_cell_33{
+.shadow_cell_33{
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 66%;
 	height: 100%;
 	width: 33%;
-	border: 1px solid black;
+	background-color: black;
+	opacity: 1;
 }
 
 /* end of shadow cells*/
+
+/*animate cover of cells*/
+/* set speed*/
+.spin0{
+  -webkit-animation: sk-rotateplane 1.4s infinite ease-in-out;
+  animation: sk-rotateplane 1.4s infinite ease-in-out;
+}
+
+.spin1{
+  -webkit-animation: sk-rotateplane 3s infinite ease-in-out;
+  animation: sk-rotateplane 3s infinite ease-in-out;
+}
+
+.spin2{
+  -webkit-animation: sk-rotateplane 2s infinite ease-in-out;
+  animation: sk-rotateplane 2s infinite ease-in-out;
+}
+.spin3{
+  -webkit-animation: sk-rotateplane 1s infinite ease-in-out;
+  animation: sk-rotateplane 1s infinite ease-in-out;
+}
+.spin4{
+  -webkit-animation: sk-rotateplane 0.75s infinite ease-in-out;
+  animation: sk-rotateplane 0.75s infinite ease-in-out;
+}
+
+.spin5{
+  -webkit-animation: sk-rotateplane 0.5s infinite ease-in-out;
+  animation: sk-rotateplane 0.5s infinite ease-in-out;
+}
+
+/* webkit for cells cover*/
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/*end of animate cover of cells*/
