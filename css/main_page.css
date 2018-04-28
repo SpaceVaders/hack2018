@@ -1,0 +1,292 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,a { 
+	margin:0;
+	padding:0;
+}
+#mp_container{
+	background: url("../img/main_page_background.jpg") repeat;
+	font-family: "Courier New";
+  	font-style: italic;
+  	z-index: 2;
+  	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+/* EDITING HEADER MENU _____START */
+/* mp - main_page */
+#mp_header{
+	z-index: 3;
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	text-align: center;
+  	font-size: 2em;
+}
+/* LOGO TOP LEFT ___START_____*/
+#mp_logo{
+	float: left;
+	height: 100%;
+	width: 15%;
+	
+}
+#mp_logo img{
+	height: 150px;
+	margin-left: 
+}
+/* LOGO TOP LEFT ___END_____*/
+
+#mp_header #mp_menu{
+	float: right;
+	height: 100%;  
+	width: 85%;
+  	text-align: left; 	
+}
+#mp_ul_menu{
+	height: 90%;
+	width: 50%;
+	float: left;
+	display: flex;
+	text-align: center;
+	 align-items: center;
+}
+#mp_header ul li{
+	display: inline-block;
+	margin-left: 20px;
+	padding: 3px;
+	border-bottom: 1px solid white;
+	border-radius: 20%;
+}
+#mp_header ul li:hover{
+	box-shadow: rgb(211,211,211,0.5) -1px 1px,
+  	 rgb(211,211,211,0.5) -2px 2px,
+  	 rgb(211,211,211,0.5) -3px 3px,
+  	  rgb(211,211,211,0.5) -4px 4px,
+  	  rgb(211,211,211,0.5) -5px 5px,
+  	  rgb(211,211,211,0.5) -6px 6px;
+  	transform: translate3d(6px, -6px, 0);
+  	transition-delay: 0s;
+    transition-duration: 0.8s;
+    transition-property: all;
+  	transition-timing-function: line;
+}
+#mp_header ul li a{
+	display: block;
+	text-decoration: none;
+	color: rgb(255,255,255,1);
+}
+/* PLAYER INFO ____START */
+#player_info{
+	float: right;
+	height: 90%;
+	width: 50%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	color: #FFF;
+}
+#player_info span{
+	font-weight: bold;
+}
+#player_info h2, #player_info p{
+	margin-right: 5%;
+}
+#player_info h2{
+	display: inline;
+}
+#player_info p{
+	display: inline-block;
+	font-size: 0.9em;
+
+}
+/* PLAYER INFO ____END */
+/* EDITING HEADER MENU _____END */
+
+/* 3D SOLAR SYSTEAM ----START------*/
+
+ /* VALID FOR EVERY ORBIT ANIMATION && ORBIT */
+@keyframes orbit {
+  0%   { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(-360deg); } 
+}
+.orbit{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+#universe {
+  background: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#galaxy{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotateX(65deg);
+  transform-style: preserve-3d;
+}
+/* FOR EVERY PLANET IS VALID */
+.planet {
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: center;
+}
+/* SPECIAL FOR MAKING PLANETS 3d __START__*/
+.pos{
+  position: absolute;
+  left: 48%;
+}
+/* ROTATING BACK PLANET TO SEE IT WHOLE */
+@keyframes backTo{
+	0%{
+		transform: rotateX(90deg) rotateY(0deg);
+	}
+	100%{
+		transform: rotateX(90deg) rotateY(360deg);
+	}
+}
+/* SPECIAL FOR MAKING PLANETS 3d __END__*/
+#sun_3d{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  background-color: orange;
+  background: url('../planets/sun/sun.jpg');
+}
+#sun_3d{
+  transform: rotateX(-65deg);
+}
+/* PART FOR MERCURY */
+.orbit_mercury {
+  width: 300px;
+  height: 300px;
+  animation: orbit 9s infinite linear;
+  margin-left: -62px;
+  margin-top: -62px;
+}
+#mercury_3d{
+	width: 50px;
+    height: 50px;
+	background: url('../planets/mercury/mercury.jpg');
+}
+#pos_mercury{
+  bottom: -28px; 
+   animation: backTo 9s infinite linear;
+}
+/* STARTING VENUS */
+.orbit_venus{
+  width: 522px;
+  height: 522px;
+  animation: orbit 15s infinite linear;
+  margin-left: -161px;
+  margin-top: -161px;
+}
+#venus_3d{
+	width: 50px;
+    height: 50px;
+	background: url('../planets/venus/venus.jpg');
+}
+#pos_venus{
+  bottom: -28px;
+   animation: backTo 15s infinite linear;
+}
+/* PART FOR EARTH */
+.orbit_earth{
+  width: 750px;
+  height: 750px;
+  animation: orbit 20s infinite linear;
+  margin-left: -275px;
+  margin-top: -275px;
+}
+#earth_3d{
+	width: 50px;
+    height: 50px;
+	background: url('../planets/earth/earth.jpg');
+	background-position: 50% 30%;
+}
+#pos_earth{
+  bottom: -28px;
+  animation: backTo 20s infinite linear;
+}
+/* PART FOR JUPITER */
+.orbit_jupiter{
+  width: 1000px;
+  height: 1000px;
+  animation: orbit 25s infinite linear;
+  margin-left: -400px;
+  margin-top: -400px;
+}
+#jupiter_3d{
+	width: 50px;
+    height: 50px;
+	background: url('../planets/jupiter/jupiter.jpg');
+	background-position: 50% 30%;
+}
+#pos_jupiter{
+  bottom: -28px;
+  animation: backTo 25s infinite linear;
+}
+/* PART FOR SATURN */
+.orbit_saturn{
+  width: 1400px;
+  height: 1400px;
+  animation: orbit 40s infinite linear;
+  margin-left: -600px;
+  margin-top: -600px;
+}
+#saturn_3d{
+	width: 50px;
+    height: 50px;
+	background: url('../planets/saturn/saturn.jpg');
+	background-position: 50% 30%;
+}
+#pos_saturn{
+  bottom: -28px;
+  animation: backTo 40s infinite linear;
+}
+/* PART FOR URANUS */
+.orbit_uranus{
+  width: 1700px;
+  height: 1700px;
+  animation: orbit 50s infinite linear;
+  margin-left: -750px;
+  margin-top: -750px;
+}
+#uranus_3d{
+	width: 50px;
+    height: 50px;
+	background: url('../planets/uranus/uranus.png');
+	background-position: 50% 30%;
+}
+#pos_uranus{
+  bottom: -28px;
+  animation: backTo 50s infinite linear;
+}
+/* PART FOR NEPTUNE */
+.orbit_neptune{
+  width: 2000px;
+  height: 2000px;
+  animation: orbit 70s infinite linear;
+  margin-left: -900px;
+  margin-top: -900px;
+}
+#neptune_3d{
+	width: 50px;
+    height: 50px;
+	background: url('../planets/neptune/neptune.jpg');
+	background-position: 50% 30%;
+	  opacity: 0.4;
+}
+#pos_neptune{
+  bottom: -28px;
+  animation: backTo 70s infinite linear;
+}
+/* 3D SOLAR SYSTEAM ----END------*/
