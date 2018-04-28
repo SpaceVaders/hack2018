@@ -9,15 +9,6 @@ while ($row = $result->fetch_assoc()) {
     $loggs[] = $row;
 }
 ?>
-<link rel="stylesheet" type="text/css" href="planets/earth/earth.css">
-<link rel="stylesheet" type="text/css" href="planets/jupiter/jupiter.css">
-<link rel="stylesheet" type="text/css" href="planets/mars/mars.css">
-<link rel="stylesheet" type="text/css" href="planets/mercury/mercury.css">
-<link rel="stylesheet" type="text/css" href="planets/neptune/neptune.css">
-<link rel="stylesheet" type="text/css" href="planets/saturn/saturn.css">
-<link rel="stylesheet" type="text/css" href="planets/sun/sun.css">
-<link rel="stylesheet" type="text/css" href="planets/uranus/uranus.css">
-<link rel="stylesheet" type="text/css" href="planets/venus/venus.css">
 
 <!-- Trigger/Open The Modal -->
 <button class="btn btn-success" id="myBtn">Open Modal</button>
@@ -42,6 +33,42 @@ while ($row = $result->fetch_assoc()) {
         case 2:
         echo '<div class=col-md-6 planet id=jupiter_outside>
     <div id=jupiter_inside></div>
+  </div>';
+          break;
+          case 3:
+        echo '<div class=planet id=mars_outside>
+    <div id=mars_inside></div>
+  </div>';
+          break;
+          case 4:
+        echo '<div class=planet id=mercury_outside>
+    <div id=mercury_inside></div>
+  </div>';
+          break;
+           case 5:
+        echo '<div class=planet id=neptune_outside>
+    <div id=neptune_inside></div>
+  </div>';
+          break;
+           case 6:
+        echo '<div id="saturn">
+    <div class="planet"></div>
+    <div class="rings"></div>
+  </div>';
+          break;
+           case 7:
+        echo '<div class=planet id=sun_outside>
+    <div id=sun_inside></div>
+  </div>';
+          break;
+          case 8:
+        echo '<div class=planet id=uranus_outside>
+    <div id=uranus_inside></div>
+  </div>';
+          break;
+           case 9:
+        echo '<div class=planet id=venus_outside>
+    <div id=venus_inside></div>
   </div>';
           break;
         default:
