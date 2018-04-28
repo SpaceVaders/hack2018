@@ -1,5 +1,5 @@
 /* for whole planet ( including ring ) */
-#saturn_all {
+#saturn {
   width: 400px;
   height: 400px;
   position: relative;
@@ -17,7 +17,7 @@
 }
 /* Planet inside - backround ( clouds, texture ) */
 /* PLANET TEXTURE BACKROUND */
-.planet_saturn{
+.planet {
   background-image: url("saturn.jpg");
   background-position: center;
   width: 180px;
@@ -30,7 +30,7 @@
   animation: rotateBackround 40s infinite linear;
 }
 /* PLANET CLOUDS TEXTURE BACKROUND  */
-.planet_saturn:after{ 
+.planet:after{ 
   content: '';
   width: 180px;
   height: 180px;

@@ -1,7 +1,7 @@
 /* Planet containers______START*/
 
 /* planet outside shadows */
-.planet_mercury{
+.planet{
 	position: relative;
 	height: 300px;
 	width: 300px;
@@ -10,7 +10,7 @@
 	animation: rotatePlanet 150s infinite linear;
 }
 /* planet inside shadows */
-.planet_mercury:after{ 
+.planet:after{ 
 	position: absolute;
 	height: 300px;
 	width: 300px;
