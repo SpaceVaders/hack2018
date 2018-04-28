@@ -9,15 +9,6 @@ while ($row = $result->fetch_assoc()) {
     $loggs[] = $row;
 }
 ?>
-<link rel="stylesheet" type="text/css" href="planets/earth/earth.css">
-<link rel="stylesheet" type="text/css" href="planets/jupiter/jupiter.css">
-<link rel="stylesheet" type="text/css" href="planets/mars/mars.css">
-<link rel="stylesheet" type="text/css" href="planets/mercury/mercury.css">
-<link rel="stylesheet" type="text/css" href="planets/neptune/neptune.css">
-<link rel="stylesheet" type="text/css" href="planets/saturn/saturn.css">
-<link rel="stylesheet" type="text/css" href="planets/sun/sun.css">
-<link rel="stylesheet" type="text/css" href="planets/uranus/uranus.css">
-<link rel="stylesheet" type="text/css" href="planets/venus/venus.css">
 
 <!-- Trigger/Open The Modal -->
 <button class="btn btn-success" id="myBtn">Open Modal</button>
