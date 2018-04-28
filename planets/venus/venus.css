@@ -1,7 +1,7 @@
 /* Planet containers______START*/
 
 /* planet outside shadows */
-.planet{
+.planet_venus{
 	position: relative;
 	height: 300px;
 	width: 300px;
@@ -10,7 +10,7 @@
 	animation: rotatePlanet 150s infinite linear;
 }
 /* planet inside shadows */
-.planet:after{ 
+.planet_venus:after{ 
 	position: absolute;
 	height: 300px;
 	width: 300px;
