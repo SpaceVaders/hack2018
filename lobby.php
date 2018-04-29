@@ -42,7 +42,7 @@ if($_SESSION['player_one']){
 					$total_pre_battle = $result_game->num_rows; 
 					if($total_pre_battle > 0){
 						// session_destroy();
-						header("Location: ./duel.php"); /* Redirect browser */
+						header("Location: ./in-battle.php"); /* Redirect browser */
 						// exit();
 					}
 				}
@@ -59,13 +59,13 @@ if($_SESSION['player_one']){
 <span id="timer"></span>
 <script type="text/javascript">
 	$(document).ready(function ajaxCall() {
-		var time = 10000;
+		var time = 15000;
 		$.ajax({
 	            url: "lobby_check.php",
 	            success: function( response ) {
 	            	console.log(response);
 	            	if( response != 0 ){
-	            		window.location.replace("./duel.php");
+	            		window.location.replace("./in-battle.php");
 	            	}
 	            }
 	    });
@@ -77,7 +77,7 @@ if($_SESSION['player_one']){
 <script type="text/javascript">
 	var initial = 3000;
 var count = initial;
-var counter; 
+var counter; //10 will  run it every 100th of a second
 
 function timer() {
     if (count <= 0) {
@@ -90,30 +90,11 @@ function timer() {
 
 function displayCount(count) {
     var res = count / 100;
+    console.log(res);
     document.getElementById("timer").innerHTML = res.toPrecision(count.toString().length) + " secs";
-    if(res == 0.00){
-    	console.log('end');
-    	ConfirmReturn()
-    }
-    if(res < 10.00){
-    	$('#timer').toggle( "pulsate" );
-    	$('#timer').css("font-size:100px");
-    }
 }
 
 displayCount(initial);
 </script>
-
-<script>
-          function ConfirmReturn()
-          {
-              var x = confirm("Join new Lobby ?");
-              if (x)
-                return location.reload();
-            else
-                return window.location.replace("logger.php");
-        }
-
-    </script> 
 <?php
 include'./includes/footer.php'; ?> 

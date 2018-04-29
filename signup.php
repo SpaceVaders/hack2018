@@ -25,8 +25,35 @@
 						echo '<a href="signup_login.php">Go Back</a>';
 			   		}else{
 			   			$hashed_pass = crypt($pass);
+
 			   			$query = "INSERT into users (username, password, race) VALUES ('".$user."','".$hashed_pass."','".$race."')";
 						mysqli_query($conn, $query);
+
+						$query = "SELECT id FROM users WHERE username='".$user."'";
+						$result = mysqli_query($conn, $query);
+						while ($row = mysqli_fetch_assoc($result)) 
+						{
+							$user_id = $row['id'];
+						}
+						/* SESSION FOR USER ID */
+						$_SESSION['user_id'] = $user_id;
+
+						$sql1="INSERT INTO player_decks (user_id, card_id, upgraded, upg_card_att, upg_card_def) VALUES ('".$user_id."', '13', '0', '4','6')";
+						$result1 = mysqli_query($conn, $sql1);
+						$sql2="INSERT INTO player_decks (user_id, card_id, upgraded, upg_card_att, upg_card_def) VALUES ('".$_SESSION['user_id']."', '14', '0', '1','1')";
+						$result2 = mysqli_query($conn, $sql2);
+						$sql3="INSERT INTO player_decks (user_id, card_id, upgraded, upg_card_att, upg_card_def) VALUES ('".$_SESSION['user_id']."', '15', '0', '9','8')";
+						$result3 = mysqli_query($conn, $sql3);
+
+						$sql4="INSERT INTO player_decks (user_id, card_id, upgraded, upg_card_att, upg_card_def) VALUES ('".$_SESSION['user_id']."', '16', '0', '20','24')";
+						$result4 = mysqli_query($conn, $sql4);
+
+						$sql5 = "INSERT INTO user_resources(user_id,resource_id,res_value) VALUES ('".$user_id."','1','15')";
+						mysqli_query($conn, $sql5);
+
+						$sql6 = "INSERT INTO user_resources(user_id,resource_id,res_value) VALUES ('".$user_id."','2','15')";
+						mysqli_query($conn, $sql6);
+
 						header("Location:signup_login.php");
 			   		}
 		        }else{

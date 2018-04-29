@@ -12,8 +12,20 @@
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" type="text/css" href="css/login_style.css" />
 		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
-		<link rel="stylesheet" type="text/css" href="css/profile.css" />
-
+		<link rel="stylesheet" type="text/css" href="css/main_page.css">
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />		
+		<link rel="stylesheet" type="text/css" href="css/main_page.css">
+		<link rel="stylesheet" type="text/css" href="css/log.css">
+		<link rel="stylesheet" type="text/css" href="css/card.css">
+		<link rel="stylesheet" type="text/css" href="planets/earth/earth.css">
+<link rel="stylesheet" type="text/css" href="planets/jupiter/jupiter.css">
+<link rel="stylesheet" type="text/css" href="planets/mars/mars.css">
+<link rel="stylesheet" type="text/css" href="planets/mercury/mercury.css">
+<link rel="stylesheet" type="text/css" href="planets/neptune/neptune.css">
+<link rel="stylesheet" type="text/css" href="planets/saturn/saturn.css">
+<link rel="stylesheet" type="text/css" href="planets/sun/sun.css">
+<link rel="stylesheet" type="text/css" href="planets/uranus/uranus.css">
+<link rel="stylesheet" type="text/css" href="planets/venus/venus.css">
 </head>
 <body>
 	

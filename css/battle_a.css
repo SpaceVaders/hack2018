@@ -1,0 +1,41 @@
+body{
+	background-image: url('../img/battle_bg.gif');
+}
+.user_player{
+	 position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255,255, 0.4);
+  text-align: center;
+  height: 300px;
+  display: flex;
+   flex-direction: row;
+   z-index: -1;
+
+}
+.user_player > div, .pc_player > div{
+	border:2px solid red;
+	border-radius: 25px;
+}
+.pc_player{
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255,255, 0.4);
+  text-align: center;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+}
+.center-img{
+ position: absolute;
+  top: 25%;
+  left:25%;
+  opacity: 0.1;
+  border-radius: 20px;
+}

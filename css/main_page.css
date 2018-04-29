@@ -2,12 +2,18 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 	margin:0;
 	padding:0;
 }
+#container{
+  background: url("../img/main_page_background.jpg") repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 #mp_container{
 	background: url("../img/main_page_background.jpg") repeat;
 	font-family: "Courier New";
-  	font-style: italic;
-  	z-index: 2;
-  	position: absolute;
+  font-style: italic;
+  z-index: 2;
+  position: absolute;
 	width: 100%;
 	height: 100%;
 }
@@ -19,13 +25,15 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
 	width: 100%;
 	height: 150px;
 	text-align: center;
-  	font-size: 2em;
+  font-size: 2em;
 }
 /* LOGO TOP LEFT ___START_____*/
 #mp_logo{
 	float: left;
 	height: 100%;
 	width: 15%;
+  background-color: rgb(255,255,255,0.2);
+  border-radius: 50%;
 	
 }
 #mp_logo img{
@@ -130,10 +138,12 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
   transform-style: preserve-3d;
 }
 /* FOR EVERY PLANET IS VALID */
-.planet {
+.mp_planet{
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: center;
+  padding: 30px;
+  padding-right: 35px;
 }
 /* SPECIAL FOR MAKING PLANETS 3d __START__*/
 .pos{
@@ -289,4 +299,78 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,
   bottom: -28px;
   animation: backTo 70s infinite linear;
 }
+
+/* PRE BATTLE SECTION, CHOOSING CARDS, BATTLE */
+#pre_battle_section{
+  z-index: 99;
+  bottom: 20%;
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  border: 1px solid white;
+}
+.battle_redirect{
+        position: absolute;
+        left: 30%;
+        color: rgb(255,255,255,1);
+        border-bottom: 2px solid white;
+        color: green;
+        background: none;
+        cursor: pointer;
+        padding: 15px 40px;
+        display: inline-block;
+        margin: 15px 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+        outline: none;
+        position: absolute;  
+        border-radius: 20%;
+
+}
+.battle_redirect span{
+  font-size: 1.3em;
+  color: #FFF;
+}
+.battle_redirect:after{
+        content: '';
+        position: absolute;
+        z-index: -1;
+        transition: all 1s ;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: none;
+        border-radius: 20%;
+        
+}
+.battle_redirect:hover:after {
+      background-color: rgb(255,255,255,0.6);
+      width: 100%;
+      
+}
+#scout{
+  top: 20%;
+}
+/* ALERT CARD MAX NUMBER */
+#max_cards{
+  position: absolute;
+  top: 43%;
+  left: 32%;
+  color: #E5E4E4;
+  font-weight: bold;
+  padding: 5px;
+}
+/* CARD CHOOSING DIV */
+#cards_choose{
+  top: 0%;
+  position: absolute;
+  left: 45%;
+  height: 500px;
+  width: 20%;
+  overflow: auto;
+
+}
+
 /* 3D SOLAR SYSTEAM ----END------*/
